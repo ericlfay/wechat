@@ -16,8 +16,26 @@ Page({
     })
   },
   handleClick: function (){
-    wx.navigateTo({
-      url: '../choose_sign/choose_sign'
+    wx.request({
+      url: 'https://ericlfay.cn:8080/wechat/user/',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      data: {
+        wechat_username: app.globalData.userInfo.nickName
+      },
+      success: function (res) {
+        console.log(res.data.has_user)
+        if (res.data.has_user=="yes"){
+          wx.redirectTo({
+            url: '../home/home'
+          })
+        }else{
+          wx.navigateTo({
+            url: '../choose_sign/choose_sign'
+          })
+        }
+      }
     })
   },
   onLoad: function () {
