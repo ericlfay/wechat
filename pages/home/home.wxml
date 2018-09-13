@@ -1,14 +1,39 @@
 <view>
-
+<view>
 <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}">
+  <block wx:for="{{imgUrls}}" wx:key="key">
     <swiper-item>
-      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      <image src="{{item}}" class="slide-image swiper" />
     </swiper-item>
   </block>
 </swiper>
-
+</view>
+<view>
+<i-notice-bar icon="systemprompt"  loop >
+    2018年世界杯,将于6月14日至7月15日举行;
+</i-notice-bar>
+</view>
+<view class="icon">
+<i-row>
+    <i-col span="6" i-class="col-class">
+    <i-icon type="activity" size="35" color="#A6A6D2" />
+    <text>\n首页首页</text>
+    </i-col>
+    <i-col span="6" i-class="col-class">
+    <i-icon type="activity" size="35" color="#A6A6D2" />
+    <text>\n首页首页</text>
+    </i-col>
+    <i-col span="6" i-class="col-class">
+    <i-icon type="activity" size="35" color="#A6A6D2" />
+    <text>\n首页首页</text>
+    </i-col>
+    <i-col span="6" i-class="col-class">
+    <i-icon type="activity" size="35" color="#A6A6D2" />
+    <text>\n首页首页</text>
+    </i-col>
+</i-row>
+</view>
 <view class="footer">
 <i-tab-bar current="{{ current }}" color="#f759ab" bindchange="handleChange" fixed="true">
     <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>

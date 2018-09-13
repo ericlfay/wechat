@@ -2,6 +2,10 @@
   "navigationBarTitleText": "成都皇家四叶草足球俱乐部",
   "usingComponents": {
     "i-tab-bar": "../../dist/tab-bar/index",
-    "i-tab-bar-item": "../../dist/tab-bar-item/index"
+    "i-tab-bar-item": "../../dist/tab-bar-item/index",
+    "i-row": "../../dist/row/index",
+    "i-col": "../../dist/col/index",
+    "i-icon": "../../dist/icon/index",
+    "i-notice-bar": "../../dist/notice-bar/index"
   }
 }

@@ -1,1 +1,10 @@
 /* pages/home/home.wxss */
+.swiper {
+  width: 100%;
+}
+.icon {
+  margin-top: 6%;
+  text-align: center;
+  color: #A6A6D2;
+  font-size: 80%;
+}
