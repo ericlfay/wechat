@@ -14,12 +14,46 @@ Page({
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
-    duration: 1500
+    duration: 1500,
+    homepage: false,
+    group: true,
+    remind: true,
+    mine: true
   },
   handleChange({ detail }) {
-    this.setData({
-      current: detail.key
-    });
+    if (detail.key == "homepage"){
+      this.setData({
+        current: detail.key,
+        homepage: false,
+        group: true,
+        remind: true,
+        mine: true
+      });
+    } else if (detail.key == "group") {
+      this.setData({
+        current: detail.key,
+        homepage: true,
+        group: false,
+        remind: true,
+        mine: true
+      });
+    } else if (detail.key == "remind") {
+      this.setData({
+        current: detail.key,
+        homepage: true,
+        group: true,
+        remind: false,
+        mine: true
+      });
+    }else{
+      this.setData({
+        current: detail.key,
+        homepage: true,
+        group: true,
+        remind: true,
+        mine: false
+      }); 
+    }
   },
   /**
    * 生命周期函数--监听页面加载
