@@ -1,57 +1,89 @@
-<view>
-<view hidden='{{homepage}}'>
-<view>
-<swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}" wx:key="key">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image swiper" />
-    </swiper-item>
-  </block>
-</swiper>
-</view>
-<view>
-<i-notice-bar icon="systemprompt"  loop >
-    2018年世界杯,将于6月14日至7月15日举行;
-</i-notice-bar>
-</view>
-<view class="icon">
-<i-row>
-    <i-col span="6" i-class="col-class">
-    <i-icon type="activity" size="35" color="#A6A6D2" />
-    <text>\n首页首页</text>
-    </i-col>
-    <i-col span="6" i-class="col-class">
-    <i-icon type="activity" size="35" color="#A6A6D2" />
-    <text>\n首页首页</text>
-    </i-col>
-    <i-col span="6" i-class="col-class">
-    <i-icon type="activity" size="35" color="#A6A6D2" />
-    <text>\n首页首页</text>
-    </i-col>
-    <i-col span="6" i-class="col-class">
-    <i-icon type="activity" size="35" color="#A6A6D2" />
-    <text>\n首页首页</text>
-    </i-col>
-</i-row>
-</view>
-</view>
-<view hidden='{{group}}'>
-2
-</view>
-<view hidden='{{remind}}'>
-3
-</view>
-<view hidden='{{mine}}'>
-4
-</view>
-<view class="footer">
-<i-tab-bar current="{{ current }}" color="#f759ab" bindchange="handleChange" fixed="true">
-    <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
-    <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="朋友"></i-tab-bar-item>
-    <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" title="通知"></i-tab-bar-item>
-    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
-</i-tab-bar>
-</view>
+<view class="body">
+  <view hidden='{{homepage}}'>
+    <view>
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="key">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image swiper" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view>
+      <i-notice-bar icon="systemprompt" loop>
+        2018年世界杯,将于6月14日至7月15日举行;
+      </i-notice-bar>
+    </view>
+    <view class="icon">
+      <i-row>
+        <i-col span="6" i-class="col-class">
+          <i-icon type="activity" size="35" color="#A6A6D2" />
+          <text>\n首页首页</text>
+        </i-col>
+        <i-col span="6" i-class="col-class">
+          <i-icon type="activity" size="35" color="#A6A6D2" />
+          <text>\n首页首页</text>
+        </i-col>
+        <i-col span="6" i-class="col-class">
+          <i-icon type="activity" size="35" color="#A6A6D2" />
+          <text>\n首页首页</text>
+        </i-col>
+        <i-col span="6" i-class="col-class">
+          <i-icon type="activity" size="35" color="#A6A6D2" />
+          <text>\n首页首页</text>
+        </i-col>
+      </i-row>
+    </view>
+    <view>
+      <view class='latest'>
+        <text>近期活动</text>
+        <hr />
+      </view>
+      <view class='latest_content'>
+        <i-card title="卡片标题" extra="额外内容">
+          <view slot="content">内容不错</view>
+        </i-card>
+        <i-card title="卡片标题" extra="额外内容">
+          <view slot="content">内容不错</view>
+        </i-card>
+        <i-card title="卡片标题" extra="额外内容">
+          <view slot="content">内容不错</view>
+        </i-card>
+        <i-card title="卡片标题" extra="额外内容">
+          <view slot="content">内容不错</view>
+        </i-card>
+      </view>
+    </view>
+  </view>
+  <view hidden='{{group}}'>
+    2
+  </view>
+  <view hidden='{{remind}}'>
+    3
+  </view>
+  <view hidden='{{mine}}'>
+  <view class="card">
+    <i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+      <view slot="content">内容不错</view>
+      <view slot="footer">尾部内容</view>
+    </i-card>
+    </view>
+    <i-cell-group>
+      <i-cell title="只显示箭头" is-link></i-cell>
+      <i-cell title="跳转到首页" is-link url="/pages/dashboard/index"></i-cell>
+      <i-cell title="只有 footer 点击有效" is-link url="/pages/dashboard/index" only-tap-footer></i-cell>
+      <i-cell title="开关">
+        <switch slot="footer" checked />
+      </i-cell>
+    </i-cell-group>
+  </view>
+  <view class="footer">
+    <i-tab-bar current="{{ current }}" color="#f759ab" bindchange="handleChange" fixed="true">
+      <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+      <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="朋友"></i-tab-bar-item>
+      <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" title="通知"></i-tab-bar-item>
+      <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+    </i-tab-bar>
+  </view>
 
 </view>
