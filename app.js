@@ -10,6 +10,19 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.request({
+          url: 'https://ericlfay.cn:8080/wechat/userinfo/',
+          method: "GET",
+          data: {
+            code: res.code,
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success: res => {
+            this.globalData.openid = res.data.openid
+          }
+        })
       }
     })
     // 获取用户信息
@@ -34,6 +47,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
-  }
+    userInfo: null,
+    openid: null
+  },
+  
+  
 })

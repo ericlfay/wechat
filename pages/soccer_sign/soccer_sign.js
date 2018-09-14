@@ -53,12 +53,14 @@ Page({
         url: 'https://ericlfay.cn:8080/wechat/user/',
         method: "POST",
         data: {
+          openid: app.globalData.openid,
           username: this.data.username,
           wechat_username: app.globalData.userInfo.nickName,
           realname: this.data.realname,
           birth: this.data.date,
           user_tag: '0',
           position: this.data.position_list[this.data.position_index][0]
+          
         },
         header: {
           'content-type': 'application/json' // 默认值
@@ -88,6 +90,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
+        console.log(res)
         _this.setData({
           position_list: res.data.result,
           real_name: res.data.realname

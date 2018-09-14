@@ -22,7 +22,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       data: {
-        wechat_username: app.globalData.userInfo.nickName
+        openid: app.globalData.openid
       },
       success: function (res) {
         console.log(res.data.has_user)
