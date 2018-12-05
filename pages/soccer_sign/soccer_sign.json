@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "成都皇家四叶草足球俱乐部",
-  "usingComponents": {
-    "i-input": "../../dist/input/index",
-    "i-button": "../../dist/button/index",
-    "i-toast": "../../dist/toast/index"
-  }
-}

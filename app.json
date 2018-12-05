@@ -1,15 +1,11 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/choose_sign/choose_sign",
-    "pages/soccer_sign/soccer_sign",
-    "pages/fan_sign/fan_sign",
-    "pages/home/home"
+    "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#C7C7E2",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
   }

@@ -4,15 +4,10 @@
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">Hi! {{userInfo.nickName}}</text>
-      <text class="user-motto">欢迎来到成都皇家四叶草足球俱乐部</text>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
   <view class="usermotto">
-    <i-button bind:click="handleClick" type="info" shape="circle" size="small">点击进入主页</i-button>
-  </view>
-  <view class="footer">
-    <text>成都皇家四叶草足球俱乐部由四叶草文化用品独家冠名赞助\n</text>
-    <text>Copyright © 2018 Ericlfay. All rights reserved. </text>
+    <text class="user-motto">{{motto}}</text>
   </view>
 </view>
